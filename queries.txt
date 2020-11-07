@@ -1,0 +1,3 @@
+//pgrequirer table
+CREATE TABLE `pgfinder`.`pgrequirer` ( `S.No.` INT NOT NULL AUTO_INCREMENT , `Name` VARCHAR(50) NOT NULL , `Phone Num` INT(11) NOT NULL , `Email` VARCHAR(50) NOT NULL , `Password` VARCHAR(50) NOT NULL , `Address` VARCHAR(100) NOT NULL , PRIMARY KEY (`S.No.`), UNIQUE (`Phone Num`), UNIQUE (`Email`)) ENGINE = InnoDB;
+
