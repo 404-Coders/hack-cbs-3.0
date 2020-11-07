@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/searchbox.css">
+    <link rel="stylesheet" href="./css/card.css">
 
 </head>
 <body>
@@ -105,6 +106,43 @@
             </div>
             </div>
         </div>
+        </section>
+        <section class="properties">
+            <div class="container">
+                <div class="row">
+                    <div class="card col-md-3 col-sm-6 col-xs-12">
+                        <div class="cardPhoto">
+                            <p class="forwhom">Boy</p>
+                            <div class="rating">
+                                <i class="fa fa-star checked"></i>
+                                <i class="fa fa-star checked"></i>
+                                <i class="fa fa-star checked"></i>
+                                <i class="fa fa-star checked"></i>
+                                <i class="fa fa-star checked"></i>
+                            </div>
+                            <img src="images/img1.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <p>Paradise</p>
+                        </div>
+                        <div class="address">                   
+                            <div id="eContact">
+                                <a style="color:black; text-decoration:none;" href="#" target="_blank" rel="noopener"><i class="fa fa-map-marker">
+                                        <p>Delhi</p>
+                                    </i></a><br>
+                                <a style="color:black; text-decoration:none;" href="#" target="_blank" rel="noopener"><i class="fa fa-map">
+                                    <p>12/24 Karol Bagh, New Delhi 110085</p>
+                                </i></a><br>
+                            </div>
+                            <div class="finalDetails">
+                                <i class="fa fa-inr price"> 4800/-</i>
+                                <i class="ac">AC</i>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     <!-- Header Js -->
     <script src="./js/header.js"></script>

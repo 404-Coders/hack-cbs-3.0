@@ -1,0 +1,108 @@
+.card{
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    height: max-content;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+.cardContainer{
+    width: 100%;
+    padding: 0;
+}
+.cardPhoto{
+    width: 100%;
+    overflow: hidden;
+}
+.cardPhoto img{
+    width: 100%;
+    padding: 0;
+    transition: all .5s ease;
+}
+.cardPhoto{
+    padding: 0;
+    margin: 0;
+}
+.details{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+.details p{
+    text-align: center;
+    padding: 5px 10px;
+    background: yellow;
+}
+.rating{
+    right: 0;
+    position: absolute;
+    font-size: 18px;
+    padding: 5px 10px;
+    background-color: black;
+    border-radius: 0 0px 0px 10px;
+}
+.fa-star{
+    color: yellow;
+}
+.forwhom{
+    position: absolute;
+    padding: 5px 20px;
+    font-size: 18px;
+    color: black;
+    border-radius: 0 0 10px 0;
+    background: yellow;
+}
+.cardPhoto:hover img{
+    transform: scale(1.1);
+}
+.address{
+    padding: 5px 10px;
+}
+.address p{
+    color: red;
+}
+.finalDetails{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.finalDetails .price{
+    padding: 5px;
+    background: red; 
+    border-radius: 5px;
+    color: white;
+    margin: 0 5px;
+}
+
+.finalDetails .ac{
+    padding-right: 10px;
+    padding-left: 10px;    background: red; 
+    border-radius: 5px;
+    color: white;
+    margin: 0 5px;
+
+}
+
+
+#eContact .fa::before {
+    position: absolute;
+}
+
+#eContact p {
+    color: red;
+    margin-left: 28px;
+    margin-top: 0px;
+}
