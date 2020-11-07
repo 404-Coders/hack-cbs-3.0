@@ -1,3 +1,12 @@
 //pgrequirer table
 CREATE TABLE `pgfinder`.`pgrequirer` ( `S.No.` INT NOT NULL AUTO_INCREMENT , `Name` VARCHAR(50) NOT NULL , `Phone Num` INT(11) NOT NULL , `Email` VARCHAR(50) NOT NULL , `Password` VARCHAR(50) NOT NULL , `Address` VARCHAR(100) NOT NULL , PRIMARY KEY (`S.No.`), UNIQUE (`Phone Num`), UNIQUE (`Email`)) ENGINE = InnoDB;
 
+
+
+
+//properties table
+CREATE TABLE `pgfinder`.`property` ( `pg_id` INT NOT NULL , `owner_name` VARCHAR(50) NOT NULL , `Name` INT(50) NOT NULL , `location` VARCHAR(50) NOT NULL , `ratings` INT(5) NOT NULL , `forwhom` VARCHAR(5) NOT NULL , `pricepm` INT(5) NOT NULL , `address` VARCHAR(100) NOT NULL , `images` VARCHAR(200) NOT NULL , PRIMARY KEY (`pg_id`)) ENGINE = InnoDB; 
+
+
+
+INSERT INTO `property` (`pg_id`, `owner_name`, `name`, `location`, `ratings`, `forwhom`, `pricepm`, `address`, `images`, `owner_number`) VALUES (NULL, 'Kushdeep Walia', 'Mannat', 'Delhi', '5', 'Girls', '6000', 'B-Block, Mahipalpur', 'mannat1,mannat2,mannat3,mannat4', '9354752373') 
