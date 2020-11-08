@@ -1,3 +1,7 @@
+<?php
+    include('./php/connection.php');
+    $query = mysqli_query($conn,"SELECT * FROM `property`");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +53,7 @@
 
     <!--HeroBox Image-->
     <div>
-       <img class="main-image" src='../images/image.png' alt='Image'/>
+       <img class="main-image" src='./images/image.png' alt='Image'/>
        <div class="wrap">
         <div class="search">
            <input type="text" class="searchTerm" placeholder="Search Locality or Landmark">
@@ -73,7 +77,7 @@
                       All the places are verified and safe.</div>
             </div>
             <div class="col-md-6">
-                <img class="about-img" src="../images/29258.jpg">
+                <img class="about-img" src="./images/29258.jpg">
             </div>
         </div>
     </section>
@@ -82,68 +86,83 @@
         <div class="row">
             <div class="col-md-3 ">
                 <div class="box">
-                <i class="fa fa-4x fa-search"></i>
-             <p class="text2">Select from a room based on your location, budget, sharing type and choice of amenities.
-                    </p>
+                    <i class="fa fa-4x fa-search"></i>
+                    <p class="text2">Select from a room based on your location, budget, sharing type and choice of amenities.</p>
                 </div>
             </div>
             <div class="col-md-3 ">
                 <div class="box">
-                <i class="fa fa-4x fa-heart"></i>
-                <p class="text2">Be spoilt for choices. Shortlist the options you like.</p>
-            </div>
-            </div>
-            <div class="col-md-3 ">
-                <div class="box">
-                <i class="fa fa-4x fa-phone"></i>
-                <p class="text2">Send in your details and sit back and relax. You are about to move-in to your new home.</p>
-            </div>
+                    <i class="fa fa-4x fa-heart"></i>
+                    <p class="text2">Be spoilt for choices. Shortlist the options you like.</p>
+                </div>
             </div>
             <div class="col-md-3 ">
                 <div class="box">
-                <i class="fas fa-4x fa-walking"></i>
-                <p class="text2">Visit the properties you like. Finalise, pay and start living!</p>
+                    <i class="fa fa-4x fa-phone"></i>
+                    <p class="text2">Send in your details and sit back and relax. You are about to move-in to your new home.</p>
+                </div>
             </div>
+            <div class="col-md-3 ">
+                <div class="box">
+                    <i class="fas fa-4x fa-walking"></i>
+                    <p class="text2">Visit the properties you like. Finalise, pay and start living!</p>
+                </div>
             </div>
         </div>
-        </section>
-        <section class="properties">
-            <div class="container">
-                <div class="row">
-                    <div class="card col-md-3 col-sm-6 col-xs-12">
-                        <div class="cardPhoto">
-                            <p class="forwhom">Boy</p>
-                            <div class="rating">
-                                <i class="fa fa-star checked"></i>
-                                <i class="fa fa-star checked"></i>
-                                <i class="fa fa-star checked"></i>
-                                <i class="fa fa-star checked"></i>
-                                <i class="fa fa-star checked"></i>
+    </section>
+    <section class="properties">
+        <div class="container">
+            <div class="row">
+                <?php
+                    while($result = mysqli_fetch_assoc($query))
+                    {
+                        $imgname = explode(',',$result['images']);
+                ?>        
+                        <div class="card col-md-3 col-sm-6 col-xs-12">
+                            <div class="cardPhoto">
+                                <p class="forwhom"><?php echo $result['forwhom'];?></p>
+                                <div class="rating">
+                                    <?php
+                                        for($i=0; $i < $result['ratings'];$i++){
+                                            echo "<i class='fa fa-star checked yellow'></i>";
+                                        }
+                                        while($i<5){
+                                            echo "<i class='fa fa-star checked'></i>";
+                                            $i++;
+                                        }
+                                    ?>
+                                </div>
+                                <img src="./images/pg-images/<?php echo$imgname[0] ?>" alt="">
                             </div>
-                            <img src="images/img1.jpg" alt="">
-                        </div>
-                        <div class="details">
-                            <p>Paradise</p>
-                        </div>
-                        <div class="address">                   
-                            <div id="eContact">
-                                <a style="color:black; text-decoration:none;" href="#" target="_blank" rel="noopener"><i class="fa fa-map-marker">
-                                        <p>Delhi</p>
+                            <div class="details">
+                                <p><?php echo $result['name'];?></p>
+                            </div>
+                            <div class="address">                   
+                                <div id="eContact">
+                                    <a style="color:black; text-decoration:none;" href="#" target="_blank" rel="noopener"><i class="fa fa-map-marker">
+                                        <p><?php echo $result['location'];?></p>
+                                        </i></a><br>
+                                    <a style="color:black; text-decoration:none;" href="#" target="_blank" rel="noopener"><i class="fa fa-map">
+                                        <p><?php echo $result['address'];?></p>
                                     </i></a><br>
-                                <a style="color:black; text-decoration:none;" href="#" target="_blank" rel="noopener"><i class="fa fa-map">
-                                    <p>12/24 Karol Bagh, New Delhi 110085</p>
-                                </i></a><br>
+                                </div>
+                                <div class="finalDetails">
+                                    <i class="fa fa-inr price"><?php echo $result['pricepm'];?>/-</i>
+                                    <?php
+                                        if($result['ac_status'] == 1) 
+                                            echo "<i class='ac'>AC</i>";
+                                        else if($result['ac_status'] == 0)
+                                            echo "<i class='ac'>NON-AC</i>";
+                                    ?>
+                                </div>
                             </div>
-                            <div class="finalDetails">
-                                <i class="fa fa-inr price"> 4800/-</i>
-                                <i class="ac">AC</i>
-                            </div>
-
                         </div>
-                    </div>
-                </div>
+                    <?php
+                        }
+                    ?>
             </div>
-        </section>
+        </div>
+    </section>
     <!-- Header Js -->
     <script src="./js/header.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -40,6 +40,9 @@
   transform: rotateY(200deg);
   padding-right: 90px;
 }
+.fa-star,.fa-map-marker,.fa-map{
+    padding: 0;
+}
 .box{
     
     height: 270px;
