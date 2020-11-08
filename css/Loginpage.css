@@ -1,163 +1,172 @@
-@font-face { font-family: roboto-regular; 
-    src: url('../font/Roboto-Regular.ttf'); } 
-body{
-    box-sizing: border-box;
-     justify-content: center;
+@font-face {
+  font-family: roboto-regular;
+  src: url("../font/Roboto-Regular.ttf");
 }
- .wrapper{
-        display: flex;
-        flex-direction: row;
-    }
-    .background{
-        position: relative;
-       top: 30px;
-      left: 200px;
-    }
-    
-    .logo
-        {
-          position: absolute;
-          top:100px;
-          left:270px;
-          color: white;
-          font-family: 'Roboto',sans-serif;
-          font-weight: 700;
-          font-size: 40px;
-          line-height: 40px;
-        }
-    .description{
-        position: absolute;
-        top: 470px;
-        left: 420px;
-        text-align: left;
-        font-family: 'Roboto',sans-serif;;
-       font-size: 17px;
-      letter-spacing: 0px;
-      color: #FFFFFF;
-       opacity: 1;
-    }
-    .signup{
-        position: absolute;
-        top: 84px;
-       left: 600px;
-        width: 408px;
-       height:  488px;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-      box-shadow: 20px 20px 20px #00000029;
-      border-radius: 0px 20px 20px 0px;
-      opacity: 1;
-    }
-    .login,
-    .dash,
-    .signin{
-        position:absolute;
-        top: 93px;
-        left: 670px;
-        text-align: center;
-        font-family:  Roboto;
-         letter-spacing: 2.37px;
-        font-size: 30px;
-        color: #707070;
-        
-    }
-    .dash{
-        left: 775px;
-    }
-    .signin{
-        top: 113px;
-        left:800px;
-    }
-    .login:hover{
-        text-decoration: underline;
-        text-decoration-color: #00CDDD;
-        cursor: pointer;
-        font-size: 32px;
-        line-height: 35px;
-    }
-    .signin:hover{
-        text-decoration: underline;
-        text-decoration-color: #00CDDD;
-        cursor: pointer;
-        line-height: 35px;
-        font-size: 32px;
-    }
-    .login:active{
-      text-decoration: underline;
-      text-decoration-color: #00CDDD;
-    }
+body {
+  box-sizing: border-box;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.background {
+  position: relative;
+  top: 30px;
+  left: 200px;
+}
 
-input[type=email], 
-input[type=password],
+.logo {
+  position: absolute;
+  top: 100px;
+  left: 270px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+}
+.description {
+  position: absolute;
+  top: 470px;
+  left: 420px;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.signup {
+  position: absolute;
+  top: 84px;
+  left: 600px;
+  width: 408px;
+  height: 488px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 20px 20px 20px #00000029;
+  border-radius: 0px 20px 20px 0px;
+  opacity: 1;
+}
+.login,
+.dash,
+.signin {
+  position: absolute;
+  top: 93px;
+  left: 670px;
+  text-align: center;
+  font-family: Roboto;
+  letter-spacing: 2.37px;
+  font-size: 30px;
+  color: #707070;
+}
+.dash {
+  left: 775px;
+}
+.signin {
+  top: 113px;
+  left: 800px;
+}
+.login:hover {
+  text-decoration: underline;
+  text-decoration-color: #00cddd;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 35px;
+}
+.signin:hover {
+  text-decoration: underline;
+  text-decoration-color: #00cddd;
+  cursor: pointer;
+  line-height: 35px;
+  font-size: 32px;
+}
+.login:active {
+  text-decoration: underline;
+  text-decoration-color: #00cddd;
+}
+
+input[type="email"],
+input[type="password"],
 .psw,
 .check,
+.login-option
 .button {
-    position: absolute;
-    top: 220px;
-    left: 660px;
-    text-align: left;
-    font-family: Roboto;
-    padding: 10px 10px;
-    letter-spacing: 0px;
-    font-size:15px;
-    opacity: 1;
-    border:none;
-    width: 20%;
-  }
-  input[type=email]{
-      border-bottom: solid #cecece;
-  }
-input[type=password]{
-    top:285px;
-    border-bottom: solid #cecece;
+  position: absolute;
+  top: 220px;
+  left: 660px;
+  text-align: left;
+  font-family: Roboto;
+  padding: 10px 10px;
+  letter-spacing: 0px;
+  font-size: 15px;
+  opacity: 1;
+  border: none;
+  width: 20%;
 }
-.psw{
-    top:350px;
-    left: 825px;
-    padding: 10px;
-    float: right;
+input[type="email"] {
+  border-bottom: solid #cecece;
 }
-a{
-    align-self: flex-end;
-    font-size: 15px;
-    text-decoration: none;
-    color: #888888;
+input[type="password"] {
+  top: 285px;
+  border-bottom: solid #cecece;
 }
-  
-.check{
-    display: block;
-    padding-left: 35px;
-    top:370px;
-    font-size: 15px;
-    left: 660px;
-    color: #888888;
-    font-family: Roboto;
-  }
-  .checkmark{
-    position: relative;
-    top:7px;
-    right:140px;
-    height: 20px;
-    width: 20px;
-  }
-  .check input:checked ~ .checkmark {
-    background-color: #2196F3;
-  }
-  
-.button{
-    top:440px;
-    left: 700px;
-    width: 204px;
-    height: 53px;
-font-family: Roboto;
-font-size: 25px;
-background:linear-gradient(#1E8FF2,#00CDDD);
+.psw {
+  top: 350px;
+  left: 825px;
+  padding: 10px;
+  float: right;
+}
+a {
+  align-self: flex-end;
+  font-size: 15px;
+  text-decoration: none;
+  color: #888888;
+}
+
+.check {
+  display: block;
+  padding-left: 35px;
+  top: 390px;
+  font-size: 15px;
+  left: 660px;
+  color: #888888;
+  font-family: Roboto;
+}
+.checkmark {
+  position: relative;
+  top: 7px;
+  right: 140px;
+  height: 20px;
+  width: 20px;
+}
+.check input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.button {
+  top: 440px;
+  left: 700px;
+  width: 204px;
+  height: 53px;
+  font-family: Roboto;
+  font-size: 25px;
+  background: linear-gradient(#1e8ff2, #00cddd);
   color: white;
   border-radius: 36px;
   text-align: center;
 }
-button:hover{
+button:hover {
   opacity: 0.7;
   cursor: pointer;
   transform: scale(1.1);
 }
 
+
+.login-option{
+  position: absolute;
+  top: 350px;
+  left: 660px;
+  padding: 10px;
+  float: right;
+}

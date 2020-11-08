@@ -17,10 +17,11 @@
             <p class="description">Find A New family<br> in an Unknown Place</p>
         </div>
         <div class="signup"></div>
-        <h1 ><a class="login" href="LoginPage2.html">Login</a></h1>
+        <h1 ><a class="login" href="../login">Login</a></h1>
         <h1 class="dash">|</h1>
         <h1 class="signin">Sign Up</h1>
-        <div class="form">
+        <form class="form">
+            <input type="email" placeholder="Enter Name/Phone no" required>
             <input type="email" placeholder="Enter email/Phone no" required>
             <input type="password" placeholder= "Password" class="pass"required>
             <input type="password" placeholder="Confirm Password" class="repeat" required>
@@ -34,8 +35,38 @@
             <input type="checkbox" class="checkmark" >
             </label>
             <button class="button">Sign Up</button>
-        </div>
+        </form>
     </div>
+
+
+    <?php
+        include('./connection.php');
+        $tablename = $_GET['tablename'];
+        $name = $_POST['name'];
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+        $pass = $_POST['pass'];
+        $address = $_POST['address'];
+        //variables if required more
+        if(strcasecmp("pgrequirer","$tablename") == 0){
+            $query = "INSERT INTO `$tablename` VALUES(NULL,'$name','$phone','$email','$pass','$address')";
+        }
+        else if(strcasecmp("pgowners","$tablename") == 0){
+            echo "Hello World";
+        }
+        else {
+            echo "last else";
+        }
+        $result = mysqli_query($conn,$query);
+        if(mysqli_num_rows($result) == 1)
+        {
+            //header for redirection to be added
+            echo "added";
+        }
+        else {
+            echo "not added";
+        }
+    ?>
 </body>
 
 </html>

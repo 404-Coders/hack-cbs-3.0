@@ -1,5 +1,5 @@
 <?php
-    include('./php/connection.php');
+    include('./db_connection/connection.php');
     $query = mysqli_query($conn,"SELECT * FROM `property`");
 ?>
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="./login">LogIn/SignUp</a></li>
                 <li><button href="#" id="button">List Your Property </button></li>
             </ul>
         </nav>
@@ -39,15 +39,6 @@
             <div class="icon-line"></div>
         </div>
     </header>
-    <nav class="nav" id="nav">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
 
     <!-- Header Ends -->
 
