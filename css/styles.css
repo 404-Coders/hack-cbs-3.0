@@ -75,3 +75,9 @@
     font-size: 14px;
     text-align: justify;
 }
+
+.header{
+    height: 100px;
+    width: 100%; 
+    background-color: #e3e6eb;  
+}
