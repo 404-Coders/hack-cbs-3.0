@@ -132,7 +132,7 @@
                                         }
                                     ?>
                                 </div>
-                                <img src="./images/pg-images/<?php echo$imgname[0] ?>" alt="">
+                                <img src="./images/pg-images/<?php echo$imgname[0] ?>.jpg" alt="">
                             </div>
                             <div class="details">
                                 <p><?php echo $result['name'];?></p>
