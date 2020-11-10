@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href='./css/header.css'>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href='./css/header.css'>
+
     <link rel="stylesheet" href="./css/searchbox.css">
     <link rel="stylesheet" href="./css/card.css">
 
@@ -101,7 +102,10 @@
             </div>
         </div>
     </section>
+
     <section class="properties">
+        <div class="heading2">Find your Room </div>
+
         <div class="container">
             <div class="row">
                 <?php
@@ -109,7 +113,7 @@
                     {
                         $imgname = explode(',',$result['images']);
                 ?>        
-                        <div class="card col-md-3 col-sm-6 col-xs-12">
+                        <div class="pro-card col-md-3 col-sm-6 col-xs-12">
                             <div class="cardPhoto">
                                 <p class="forwhom"><?php echo $result['forwhom'];?></p>
                                 <div class="rating">
@@ -118,7 +122,7 @@
                                             echo "<i class='fa fa-star checked yellow'></i>";
                                         }
                                         while($i<5){
-                                            echo "<i class='fa fa-star checked'></i>";
+                                            echo "<i class='fa fa-star checked black'></i>";
                                             $i++;
                                         }
                                     ?>

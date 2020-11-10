@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/Loginpage.css" type="text/css">
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
 </head>
 <body>
     <div class="wrapper">
@@ -56,7 +56,9 @@
             if(mysqli_num_rows($result) == 1)
             {
                 //header for redirection to be added
-                echo "added";
+                // header("../admin");
+                echo "HEllo";
+                header("Location: /../admin/"); 
             }
             else {
                 echo '<script>

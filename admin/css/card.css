@@ -43,21 +43,18 @@
 .details p{
     text-align: center;
     padding: 5px 10px;
-    background: #19d3da;
+    background: yellow;
 }
 .rating{
     right: 0;
     position: absolute;
     font-size: 18px;
     padding: 5px 10px;
-    background-color: #19d3da;
+    background-color: black;
     border-radius: 0 0px 0px 10px;
 }
 .yellow{
-    color: white;
-}
-.black{
-    color: black;
+    color: yellow;
 }
 .forwhom{
     position: absolute;
@@ -65,7 +62,7 @@
     font-size: 18px;
     color: black;
     border-radius: 0 0 10px 0;
-    background: #19d3da;
+    background: yellow;
 }
 .cardPhoto:hover img{
     transform: scale(1.1);
@@ -74,7 +71,7 @@
     padding: 5px 10px;
 }
 .address p{
-    color: #686d76;
+    color: red;
 }
 .finalDetails{
     width: 100%;
@@ -84,7 +81,7 @@
 }
 .finalDetails .price{
     padding: 5px;
-    background: #19d3da; 
+    background: red; 
     border-radius: 5px;
     color: white;
     margin: 0 5px;
@@ -92,22 +89,20 @@
 
 .finalDetails .ac{
     padding-right: 10px;
-    padding-left: 10px;    
-    background: #19d3da; 
+    padding-left: 10px;    background: red; 
     border-radius: 5px;
     color: white;
     margin: 0 5px;
 
 }
-.fa-star{
-}
+
 
 #eContact .fa::before {
     position: absolute;
 }
 
 #eContact p {
-    color: #686d76;
+    color: red;
     margin-left: 28px;
     margin-top: 0px;
 }
